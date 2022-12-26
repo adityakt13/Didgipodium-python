@@ -24,8 +24,8 @@ while True:
     elif choice == 'exit':
         break
     elif choice == 'add':
-        contact = input("Enter name :")
-        number = input("Enter number :")
+        contact = input("Enter contact name :")
+        number = input("Enter number of the contact :")
         dict1[contact] = number
         print(f'{contact} added successfully')
     else:
