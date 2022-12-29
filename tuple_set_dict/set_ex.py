@@ -8,7 +8,6 @@ c = [1,5,3,2,1,21,12,2,5,1,2,2,5]
 cs = set(c)
 print(c)
 print(cs)
-
 # empty set
 d = set()
 print(d)
