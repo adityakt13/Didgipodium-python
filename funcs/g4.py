@@ -1,12 +1,12 @@
 from random import randint , choice
 import pgzrun
 
-WIDTH = 800
+WIDTH = 900
 HEIGHT = 500
 
 box1 = Rect((100,100),(50,50))
-box2 = Rect((WIDTH -150,100),(50,50))
-b1x = 2
+box2 = Rect(( 140,200),(50,50))
+b1x = 3
 b2x = 3
 
 def draw() :
@@ -22,9 +22,9 @@ def update ():
     box1.x += b1x
     box2.x += b2x
     if box2.right > WIDTH or box2.left <0 :
-        sounds.metal.play()
+        sounds.tappukepapa.play()
         b2x = - b2x
     if box1.right > WIDTH or box1.left <0 :
-        sounds.metal.play()
+        sounds.saatvifail.play()
         b1x = - b1x
 pgzrun.go()
