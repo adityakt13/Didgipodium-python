@@ -13,6 +13,6 @@ tiger = Dog(breed='Pug', age= 3,gender = "male", weight= 15)
 blacky = Dog(breed='Lebrador', age= 5, weight= 25, gender = "not defined")
 
 print(panther.breed)
-print(tiger.age)
+print(tiger.gender)
 print(panther.weight)
-print(blacky.gender)
+print(blacky.age)
