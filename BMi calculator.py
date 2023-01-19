@@ -1,6 +1,6 @@
 print("Know your BMI to know your health better")
 print("Aditya BMI Calculator service")
-height = float(input("Enter your height in c.m.: "))/100 #to convert height into metres
+height = float(input("Enter your height in c.m.: "))/100  #to convert height into metres
 weight = float(input("Enter your weight in kilograms: "))
 BMI = weight / (height **2)
 if BMI <18.5:
