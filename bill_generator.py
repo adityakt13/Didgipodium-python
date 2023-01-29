@@ -34,7 +34,7 @@ inventory.append({
     'Cost Per Item': 2000.00,
     'Tax %' : 15
 })
-# print(inv)
+print(inventory)
 
 def bill(order):
     total_bill = 0
