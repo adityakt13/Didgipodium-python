@@ -34,28 +34,28 @@ inventory.append({
     'Cost Per Item': 2000.00,
     'Tax %' : 15
 })
-print(inventory)
-def bill (order):
+# print(inv)
+
+def bill(order):
     total_bill = 0
     for entry in order:
         id = entry[0]
         qty = entry[1]
-        total_bill += calculate (id, qty)
+        total_bill += calculate(id, qty)
     return total_bill
 
-def calculate (id,qty):
+def calculate(id, qty):
     for record in inventory:
-        if record ['Item Id'] == id:
-            amt = record ['Cost Per Item' ] * qty
-            tax = amt * record ['Tax %']/ 100
+        if record['Item Id'] == id:
+            amt=  record['Cost Per Item'] * qty
+            tax = amt * record['Tax %'] / 100
             return amt + tax
     return 0
 
-# taking input 
+# taking input
 n = int(input('>>>'))
-orders = [list(map(int,input ('>').split()) for i in range (n))]
+orders = [list(map(int,input('>').split())) for i in range(n)]
 print(orders)
 
-total = bill (orders)
-print(f"Amount = {total}")
-inventory.extend
+total = bill(orders)
+print(f'Amount = {total}')
