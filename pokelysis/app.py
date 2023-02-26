@@ -9,7 +9,7 @@ st.set_page_config(
     layout='wide'
 )
 st.sidebar.title('🦖🦕 pokemon app')
-st.image('pokelysis/arceus.jpeg', use_column_width= True)
+st.image( 'pokelysis/pikachu.jpeg', use_column_width= True)
 
 # load data
 @st.cache_data
