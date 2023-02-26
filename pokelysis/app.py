@@ -37,4 +37,23 @@ tabs[0].dataframe(subset, use_container_width = True)
 
 # Univariate Analysis Tool
 # Attack
+ss = subset.sort_values(by = 'Attack')
+fig1 = px.histogram (ss, x = 'Attack', nbins = 20)
+fig2 = px.bar (ss, x = 'Name', y = 'Attack')
+tabs[1].subheader(f'{type1} Stats')
+type[1].subheader('Attack')
+tabs[1].plotly_chart(fig1, use_container_width = True)
+tabs[1].plotly_chart(fig2, use_container_width = True)
+
+# Defense
 ss = subset.sort_values(by = 'Defense')
+fig1 = px.histogram (ss, x = 'Defense', nbins = 20)
+fig2 = px.bar (ss, x = 'Name', y = 'Defense')
+tabs[1].subheader(f'{type1} Stats')
+type[1].subheader('Defense')
+tabs[1].plotly_chart(fig1, use_container_width = True)
+tabs[1].plotly_chart(fig2, use_container_width = True)
+
+# can be done the same for HP, Sp. Atk, Sp. Def, Speed
+
+# Bivariate Analysis tab
