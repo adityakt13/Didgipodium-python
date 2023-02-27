@@ -28,3 +28,12 @@ with st.spinner('Loading data...'):
     df = load_dataset()
     # st.balloons()
 
+# UI
+countries = df.index.tolist()
+sel_country = st.selectbox('Select a country', countries)
+st.info(f'You selected {sel_country}')
+
+# KPI
+total_immigrants = df.loc[sel_country, 'Total']
+avg_immigrants = df.loc[sel_country, years].mean()
+st.subheader("Key Performance Indicators")
