@@ -37,3 +37,15 @@ st.info(f'You selected {sel_country}')
 total_immigrants = df.loc[sel_country, 'Total']
 avg_immigrants = df.loc[sel_country, years].mean()
 st.subheader("Key Performance Indicators")
+c1, c2, c3 = st.columns(3)
+c1.metric("Total Immigrants", f'{total_immigrants} people', '👨‍👩‍👧‍👦')
+c2.metric('Avg. Immigrants/yr', f'{round(avg_immigrants)} people', '👨‍👩‍👧‍👦/Year')
+c3.metric("Total years", f'{len(years)} years', '📅')
+
+country_df =  df.loc[sel_country, years]
+fig = px.area(y=country_df, x=country_df.index, title=f'{sel_country} immigrants to Canada')
+fig2 = px.scatter(y=country_df, x=country_df.index, title=f'{sel_country}')
+
+c1, c2 = st.columns(2)
+c1.plotly_chart(fig, use_container_width=True)
+c2.plotly_chart(fig2, use_container_width=True)
