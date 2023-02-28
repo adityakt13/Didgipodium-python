@@ -47,5 +47,5 @@ fig = px.area(y=country_df, x=country_df.index, title=f'{sel_country} immigrants
 fig2 = px.scatter(y=country_df, x=country_df.index, title=f'{sel_country}')
 
 c1, c2 = st.columns(2)
-c1.plotly_chart(fig, use_container_width=True)
-c2.plotly_chart(fig2, use_container_width=True)
+c1.plotly_chart(fig, use_container_width = True)
+c2.plotly_chart(fig2, use_container_width = True)
