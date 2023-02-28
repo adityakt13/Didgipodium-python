@@ -35,7 +35,7 @@ st.info(f'You selected {sel_country}')
 
 # KPI
 total_immigrants = df.loc[sel_country, 'Total']
-avg_immigrants = df.loc[sel_country, years].mean()
+avg_immigrants = df.loc[sel_country, years].mean() 
 st.subheader("Key Performance Indicators")
 c1, c2, c3 = st.columns(3)
 c1.metric("Total Immigrants", f'{total_immigrants} people', '👨‍👩‍👧‍👦')
