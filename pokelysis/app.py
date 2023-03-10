@@ -10,12 +10,12 @@ st.set_page_config(
 )
 
 st.sidebar.title('🦕 Pokemon App 🦖')
-st.image('pokelysis/pikachu.jpg', use_column_width=True)
+st.image('pokelysis/pikachu.jpeg', use_column_width=True)
 
 # load data
 @st.cache_data
 def load_pokemon():
-    data = pd.read_csv('pekelysis/Pokemon.csv', index_col=0)
+    data = pd.read_csv('pokelysis/Pokemon.csv', index_col=0)
     return data
 
 with st.spinner('Loading Pokemon Data ...'):
@@ -72,4 +72,4 @@ z = tabs[3].selectbox('Select Z data',pokemon.select_dtypes('number').columns)
 c = tabs[3].selectbox('Select Color type',pokemon.select_dtypes(exclude='number').columns)
 fig = px.scatter_3d(subset, x=x, y=y, z=z, color=c, hover_data=['Name'], size=x, size_max=60)
 tabs[3].subheader(f'{type1} : {x} vs {y} vs {z} by {c}')
-tabs[3].plotly_chart(fig, use_container_width=True)
+tabs[3].plotly_chart(fig, use_container_width=True) 
